@@ -20,6 +20,9 @@ clean:
 distclean:
 	rm -rf ./.ccache ./$(BUILD_DIRS)
 
+get-dev-config:
+	./scripts/get_dev_config
+
 src-pkg:
 	tar cvJf sources.tar.xz sources .stamps
 
@@ -62,7 +65,7 @@ docker-%: GID := $(shell id -g)
 docker-%: PWD := $(shell pwd)
 
 # Use 'sudo' if docker ps doesn't work.  In theory, other things than missing sudo could cause this.  But sudo needed is a common issue and easy to fix.
-docker-%: SUDO := $(shell if ! docker ps -q 2>&1 > /dev/null; then echo "sudo"; fi)
+docker-%: SUDO := $(shell if ! docker ps -q 2> /dev/null; then echo "sudo"; fi)
 
 # Launch docker as interactive if this is an interactive shell (allows ctrl-c for manual and running non-interactive - aka: build server)
 docker-%: INTERACTIVE=$(shell [ -t 0 ] && echo "-it")

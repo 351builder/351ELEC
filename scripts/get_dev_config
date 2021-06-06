@@ -1,0 +1,25 @@
+#! /bin/bash
+
+DEV_CONFIG=".dev-config"
+DEV_CONFIG_REPO=pkegg/351elec-dev-config.git
+if [ ! -d "$DEV_CONFIG" ]
+then
+  echo "Performing git clone..."
+  if ! git clone git@github.com:${DEV_CONFIG_REPO} ${DEV_CONFIG} 2> /dev/null
+  then
+    echo "SSH checkout did not work.  Trying https..."
+    if ! git clone https://github.com/${DEV_CONFIG_REPO} ${DEV_CONFIG} 2> /dev/null
+    then 
+      echo "ERROR: Both SSH and HTTPS git clones did not work.  "
+      echo "   Please ensure your credentials are correct and you have access to: ${DEV_CONFIG_REPO}"
+      echo "   You may want to try and manually clone: git clone git@github.com:${DEV_CONFIG_REPO} ${DEV_CONFIG}"
+      exit 1
+    fi
+  fi
+else
+  echo "Pulling latest updates..."
+  pushd $DEV_CONFIG > /dev/null
+  git pull
+  popd > /dev/null
+fi
+echo "done"

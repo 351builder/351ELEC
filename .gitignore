@@ -5,6 +5,7 @@
 /build.*/
 /.fakeroot.*
 /.ccache-*
+/.dev-config/
 
 # automatically downloaded source files
 /sources/
