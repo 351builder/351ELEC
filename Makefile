@@ -64,6 +64,9 @@ docker-%: GID := $(shell id -g)
 # PWD is 'present working directory' and passes through the full path to current dir to docker (becomes 'work')
 docker-%: PWD := $(shell pwd)
 
+# Home volume is used to have .ssh keys available for git clone of dev-config repo.  Not needed for other docker commands
+docker-get-dev-config: HOME_VOLUME := $(shell echo "-v $$HOME:/home/docker")
+
 # Use 'sudo' if docker ps doesn't work.  In theory, other things than missing sudo could cause this.  But sudo needed is a common issue and easy to fix.
 docker-%: SUDO := $(shell if ! docker ps -q 2> /dev/null; then echo "sudo"; fi)
 
@@ -86,5 +89,5 @@ docker-image-push:
 
 # Wire up docker to call equivalent make files using % to match and $* to pass the value matched by %
 docker-%:
-	$(SUDO) docker run $(INTERACTIVE) --rm --user $(UID):$(GID) -v $(PWD):/work $(DOCKER_IMAGE) make $*
+	$(SUDO) docker run $(INTERACTIVE) --rm --user $(UID):$(GID) $(HOME_VOLUME) -v $(PWD):/work $(DOCKER_IMAGE) make $*
 
