@@ -24,20 +24,21 @@ if [ -z "${PKG_NAME}" ]; then
 fi
 
 DEV_CONFIG=".dev-config"
-
-if [ -d "${DEV_CONFIG}" ]
+if [ "${DEV_CONFIG_INITIALIZED}" != "Y" ]
 then
-  echo "Sourcing configuration in ${DEV_CONFIG}"
-
-  # all export causes all files sourced to be exported and available in packages
-  set -o allexport
-  source .dev-config/*.all.conf
-  set +o allexport
-else
-  echo "WARNING: This build will not have 351ELEC specific api keys for screenscraping."
-  echo "  "
-  sleep 3
+  if [ -d "${DEV_CONFIG}" ]
+  then
+    echo "Sourcing configuration in ${DEV_CONFIG}"
+    # all export causes all files sourced to be exported and available in packages
+    set -o allexport
+    source .dev-config/*.all.conf
+    set +o allexport
+  else
+    echo "WARNING: This build will not have 351ELEC specific api keys for screenscraping."
+  fi
+  export DEV_CONFIG_INITIALIZED="Y"
 fi
+
 
 
 if [ -n "${PKG_ARCH}" ]; then
