@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="vba-next"
-PKG_VERSION="90d7d9b4133bc1c7ed430de9f538ffae55b7a32f"
-PKG_SHA256="7bf9e173297b328cdf0b4243c9da1ba2d7daf76cd0632b2111439b839b5b517b"
+PKG_VERSION="ebd175d57ebb2065726099d32034cb25934787ce"
+PKG_SHA256="cbfd4ee0d9a590bbd7c6a96c7d9efd6e98a98f16a1af1cc06f9fec6e8b0d471c"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"

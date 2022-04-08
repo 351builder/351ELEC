@@ -19,8 +19,8 @@
 ################################################################################
 
 PKG_NAME="np2kai"
-PKG_VERSION="8c96339397dba27500051586c875aa2223f11b40"
-PKG_SHA256="8e4809555b9048b7d27e4274c13fa7f7236cd97bbe8332bec608c43d75a653fd"
+PKG_VERSION="910ab3f636af8d159c85464029f3e59b1a835374"
+PKG_SHA256="7fc2f52d7297b3707b3cc7868fae06d08a32a48d782ade8ab293bd0f7cd399d5"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="MIT"
@@ -33,8 +33,9 @@ PKG_SHORTDESC="Neko Project II kai"
 PKG_TOOLCHAIN="make"
 
 make_target() {
-cd $PKG_BUILD/sdl
-    make
+  VERSION="${PKG_VERSION:0:7}"
+  cd $PKG_BUILD/sdl
+  make NP2KAI_VERSION=$VERSION NP2KAI_HASH=$VERSION
 }
 
 makeinstall_target() {

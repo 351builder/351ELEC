@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,7 +20,8 @@
 ################################################################################
 
 PKG_NAME="race"
-PKG_VERSION="8402277aad01e6dedf7c636e9ba17fffc7beef96"
+PKG_VERSION="b8264bbaa0878e2d0ebae8ca60bd886c5971e255"
+PKG_SHA256="51633d70e45e89d46dc97c1990b3d5cb0ff2cba7773023a16392db825f9ffa6b"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

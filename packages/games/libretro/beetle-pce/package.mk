@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="beetle-pce"
-PKG_VERSION="1e1f6a98149b3cb31848c473284741aa49ca2018"
-PKG_SHA256="39590d16c4ea211549b017685fb310b3b5f0f410213ef27b16255133d47f54c3"
+PKG_VERSION="e8801687f232a6f8828b3ff5dadbc9fe1b0076fc"
+PKG_SHA256="6ba8965da9f27ca1feb4a6406e6f3114f60712e8ddd8778847885a289b893f00"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

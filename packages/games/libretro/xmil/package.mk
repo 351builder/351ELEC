@@ -14,7 +14,6 @@ PKG_SECTION="libretro"
 PKG_SHORTDESC="Libretro port of X Millennium Sharp X1 emulator"
 PKG_LONGDESC="Libretro port of X Millennium Sharp X1 emulator"
 PKG_TOOLCHAIN="make"
-GET_HANDLER_SUPPORT="git"
 
 make_target() {
   cd $PKG_BUILD
@@ -24,5 +23,4 @@ make_target() {
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/libretro
   cp $PKG_BUILD/libretro/x1_libretro.so $INSTALL/usr/lib/libretro/
-  cp x1_libretro.info $INSTALL/usr/lib/libretro/
 }

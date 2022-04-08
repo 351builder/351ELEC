@@ -2,7 +2,7 @@
 
 # SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (C) 2021-present Shanti Gilbert (https://github.com/shantigilbert)
-# Copyright (C) 2021-present 351ELEC (https://github.com/351ELEC/351ELEC)
+# Copyright (C) 2021-present AmberELEC (https://github.com/AmberELEC)
 
 . /etc/profile
 
@@ -11,16 +11,19 @@ CONFIG_DIR="/storage/.config/distribution/ecwolf"
 CONFIG_FILE="${CONFIG_DIR}/ecwolf.cfg"
 SAVE_DIR="/storage/roms/gamedata/ecwolf"
 
+if [ ! -L "/storage/.config/ecwolf" ]
+then
+  ln -sf "/storage/.config/distribution/ecwolf" "/storage/.config/ecwolf"
+fi
+
+if [ ! -f "/storage/.config/distribution/ecwolf/ecwolf.cfg" ]
+then
+  cp -rf /usr/config/distribution/ecwolf/ecwolf.cfg /storage/.config/distribution/ecwolf/
+fi
+
 mkdir -p ${SAVE_DIR}
 
 params=" --config ${CONFIG_FILE} --savedir ${SAVE_DIR}"
-
-if [[ "$EE_DEVICE" == RG351P ]]; then
-  params+=" --res 480 320"
-fi
-if [[ "$EE_DEVICE" == RG351V ]]; then
-  params+=" --res 640 480"
-fi
 
 # data can be SD2 SD3 SOD WL6 or N3D and it's passed as the ROM
 DATA=${1#*.}
@@ -50,6 +53,13 @@ if [ ${DATA} == "ecwolf" ]; then
   done < "${1}"
 else
   params+=" --data ${DATA}"
+fi
+
+if [[ "$EE_DEVICE" == RG351P ]]; then
+  params+=" --res 480 320"
+fi
+if [[ "$EE_DEVICE" == RG351V ]] || [[ "$EE_DEVICE" == RG351MP ]]; then
+  params+=" --res 640 480"
 fi
 
 cd "${CONFIG_DIR}"

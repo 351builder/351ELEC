@@ -19,8 +19,8 @@
 ################################################################################
 
 PKG_NAME="pokemini"
-PKG_VERSION="40092c4ea1f15fce877c0b942c4fe907b5f3b6ff"
-PKG_SHA256="5486f8bf81ac12c0de3dc9b869711da17f8d469e98117d0e81703266e22fba9c"
+PKG_VERSION="c072d0275c7306c625f1e554a98e7c84137d2841"
+PKG_SHA256="c9e58828853d4f57ab9769dd3b1fe0aba7c4079d6d43162c0afb67b796506beb"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"
@@ -35,6 +35,10 @@ PKG_LONGDESC="Obscure nintendo handheld emulator (functional,no color files or s
 PKG_IS_ADDON="no"
 PKG_TOOLCHAIN="make"
 PKG_AUTORECONF="no"
+
+if [[ "$DEVICE" == RG351P ]] || [[ "$DEVICE" == RG351V ]]; then
+  PKG_PATCH_DIRS="rumble"
+fi
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/libretro

@@ -3,8 +3,7 @@
 # Copyright (C) 2016-present Team LibreELEC (https://libreelec.tv)
 
 PKG_NAME="openssl"
-PKG_VERSION="1.1.1g"
-PKG_SHA256="ddb04774f1e32f0c49751e21b67216ac87852ceb056b75209af2443400636d46"
+PKG_VERSION="1.1.1n"
 PKG_LICENSE="BSD"
 PKG_SITE="https://www.openssl.org"
 PKG_URL="https://www.openssl.org/source/$PKG_NAME-$PKG_VERSION.tar.gz"
@@ -102,8 +101,8 @@ post_makeinstall_target() {
     ln -sf /run/libreelec/cacert.pem $INSTALL/etc/pki/tls/cacert.pem
   mkdir -p $INSTALL/etc/pki/tls/certs
     ln -sf /run/libreelec/cacert.pem $INSTALL/etc/pki/tls/certs/ca-bundle.crt
-  mkdir -p $INSTALL/usr/lib/ssl
-    ln -sf /run/libreelec/cacert.pem $INSTALL/usr/lib/ssl/cert.pem
+  mkdir -p $INSTALL/usr/lib
+    ln -sf /etc/ssl $INSTALL/usr/lib/ssl
 }
 
 post_install() {

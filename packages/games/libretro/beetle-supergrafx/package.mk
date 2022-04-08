@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="beetle-supergrafx"
-PKG_VERSION="7a84c5e3b9e0dc44266d3442130296888f3c573a"
-PKG_SHA256="888fa492bbc9615daa299c4e5ca8e603aaeb856b9c3b78a7dfb175b47d8c0bfe"
+PKG_VERSION="59991a98c232b1a8350a9d67ac554c5b22771d3c"
+PKG_SHA256="5ab78bc66ab428154b1403895173d43793574794ed1b763c63e45761f31662c7"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="beetle-pcfx"
-PKG_VERSION="ceff11eab32febfcf8507f0bfe618bcdf80e75ef"
-PKG_SHA256="fbe1ff0d6505b61c230f406b628ec4404d0fdda2e50d9b1fdcb58a83e4e8b933"
+PKG_VERSION="00abc26cafb15cc33dcd73f4bd6b93cbaab6e1ea"
+PKG_SHA256="df7a77235c1de48e6fa1f2178ede44c8506606eab657f534d8caf1036944e5ee"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

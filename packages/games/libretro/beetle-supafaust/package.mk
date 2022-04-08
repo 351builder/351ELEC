@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 ################################################################################
 
 PKG_NAME="beetle-supafaust"
-PKG_VERSION="927b3a1f5e5b6689a1ff4d37ad42814e29ee0148"
+PKG_VERSION="a106dbdc8c5ef11f216b21f4ba1b22cb637e599d"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"
@@ -29,7 +29,6 @@ PKG_URL="$PKG_SITE.git"
 #PKG_GIT_CLONE_BRANCH="hd"
 PKG_DEPENDS_TARGET="toolchain"
 PKG_SHORTDESC="Super Nintendo (Super Famicom) emulator"
-GET_HANDLER_SUPPORT="git"
 PKG_TOOLCHAIN="make"
 
 PKG_IS_ADDON="no"

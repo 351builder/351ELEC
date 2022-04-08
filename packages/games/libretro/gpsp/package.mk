@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="gpsp"
-PKG_VERSION="cc1a07462113e7018a2e898b8293bcc15057a5bf"
-PKG_SHA256="66bcb7ecd6cd084e31dc1d19b8b691dc9e21446578626694af4ea07a333f2515"
+PKG_VERSION="e554360dd3ed283696fc607877024a219248b735"
+PKG_SHA256="d989408ccc6e6fc20caa3af8727bcd4cdeb3ed68b6e5f2a6b4312576cf7fc700"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"
@@ -41,7 +41,7 @@ make_target() {
   if [ "$ARCH" == "arm" ]; then
     make CC=$CC platform=unix
   else
-    make CC=$CC
+    make CC=$CC platform=arm64
   fi  
 }
 

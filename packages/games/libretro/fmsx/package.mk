@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="fmsx"
-PKG_VERSION="d0581d40a40b231d619d2c5363fc2e0ecefeafbd"
-PKG_SHA256="61fd4d4a3b2dc8aff2e33b601bafd15c87a0a4908cb5a47f5690dfe70a37d990"
+PKG_VERSION="f9ea9eacd49297783c216d147dcc1a22465b2749"
+PKG_SHA256="0c67bd4034adb0d5fa2ac73e764a57809bae4cf445050040efb35310bf572e45"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

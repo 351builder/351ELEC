@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="vice"
-PKG_VERSION="a223ced980ffd14cb881825eff2eb94d1fc35927"
-PKG_SHA256="5f94396db232f1cb1a72b619da1a1f989761540966867f2289511fb00ba77875"
+PKG_VERSION="c509d3e243faa9197ddef7caaee8d7a61462418d"
+PKG_SHA256="441c2ce5b523a0f7ff4dfa7548b4c33b6549ff2d8c4a8afeec448fd6645bf690"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

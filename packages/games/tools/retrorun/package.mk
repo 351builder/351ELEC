@@ -1,16 +1,14 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
-# Copyright (C) 2021-present Shanti Gilbert (https://github.com/shantigilbert)
+# Copyright (C) 2021-present AmberELEC (https://github.com/AmberELEC)
 
 PKG_NAME="retrorun"
-PKG_VERSION="a8fabc27780502a3ebc41e6b79f8e7ab74e3d1f7"
+PKG_VERSION="4204b79720141948f6fcc1eb92106b499aa445ac"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"
-PKG_SITE="https://github.com/navy1978/retrorun-go2"
+PKG_SITE="https://github.com/AmberELEC/retrorun-go2"
 PKG_URL="$PKG_SITE.git"
-PKG_DEPENDS_TARGET="toolchain libgo2 libdrm libpng"
+PKG_DEPENDS_TARGET="toolchain libgo2 libdrm libpng linux"
 PKG_TOOLCHAIN="make"
-GET_HANDLER_SUPPORT="git"
-VERSION=${LIBREELEC_VERSION}
 
 pre_make_target() {
   mkdir -p src/go2
@@ -18,15 +16,12 @@ pre_make_target() {
 }
 
 pre_configure_target() {
-CFLAGS+=" -I$(get_build_dir libdrm)/include/drm"
-CFLAGS+=" -I$(get_build_dir linux)/include/uapi"
-CFLAGS+=" -I$(get_build_dir linux)/tools/include"
-
-PKG_MAKE_OPTS_TARGET=" config=release ARCH="
+  CFLAGS+=" -I$(get_build_dir libdrm)/include/drm"
+  CFLAGS+=" -I$(get_build_dir linux)/include/uapi"
+  CFLAGS+=" -I$(get_build_dir linux)/tools/include"
 }
 
 make_target() {
-  sed -i 's/\/\/ free(sramName);/free(sramName);/g' src/main.cpp
   make config=release ARCH=
 }
 

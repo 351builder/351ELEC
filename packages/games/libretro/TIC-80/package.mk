@@ -20,7 +20,7 @@
 ################################################################################
 
 PKG_NAME="TIC-80"
-PKG_VERSION="920b13f5066124908132cd21c8dbeac3f4a68c47"
+PKG_VERSION="ce23e8d55ee3411eb02961dbcdee5544c4db4e24"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"
@@ -31,7 +31,6 @@ PKG_PRIORITY="optional"
 PKG_SECTION="libretro"
 PKG_SHORTDESC="Tic80"
 PKG_LONGDESC="TIC-80 emulator"
-GET_HANDLER_SUPPORT="git"
 PKG_BUILD_FLAGS="+pic"
 
 PKG_IS_ADDON="no"
@@ -41,7 +40,8 @@ PKG_CMAKE_OPTS_TARGET="-DBUILD_PLAYER=OFF \
                        -DBUILD_SOKOL=OFF \
                        -DBUILD_SDL=OFF \
                        -DBUILD_DEMO_CARTS=OFF \
-                       -DBUILD_LIBRETRO=ON"
+                       -DBUILD_LIBRETRO=ON \
+                       -DCMAKE_BUILD_TYPE=Release"
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/libretro

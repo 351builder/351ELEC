@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,7 +20,8 @@
 ################################################################################
 
 PKG_NAME="smsplus-gx"
-PKG_VERSION="20414262883bf3a32149684a2e6750bd12508fd4"
+PKG_VERSION="8e8378896bc15c8a9f756339b596171ba266cc14"
+PKG_SHA256="c6e01fb2c250f8f6b5ba1df664a1955c965f24e51f09465a500146e75c1430a7"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="Non-commercial"

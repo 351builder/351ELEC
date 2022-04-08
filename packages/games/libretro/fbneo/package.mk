@@ -1,10 +1,10 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
 # Copyright (C) 2019-present Shanti Gilbert (https://github.com/shantigilbert)
-# Maintenance 2020 351ELEC team (https://github.com/fewtarius/351ELEC)
+# Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 
 PKG_NAME="fbneo"
-PKG_VERSION="8a12c7a19546e4e41b210eb359e2a65b712deabc"
-PKG_SHA256="aca5c02381b76eee7bb55a1944720ec35db45cb6dfe4062a24714b05936b695f"
+PKG_VERSION="fb4d2c2611929faf7be924a4e61776879079c3f0"
+PKG_SHA256="fe401dc32c166df0ee53ff6c8e3257645878688cd6ac928319f66b29feda0f87"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="Non-commercial"

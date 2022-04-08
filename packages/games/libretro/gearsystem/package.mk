@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,7 @@
 ################################################################################
 
 PKG_NAME="gearsystem"
-PKG_VERSION="518651a63c54a1eebbb33fbfd98b36bf4cee976e"
-PKG_SHA256=""
+PKG_VERSION="a6849bfa6973af6417678d9b1ea893064aa3910c"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"
@@ -33,7 +32,6 @@ PKG_SECTION="libretro"
 PKG_SHORTDESC="Gearsystem is a Sega Master System / Game Gear / SG-1000 emulator written in C++"
 PKG_LONGDESC="Gearsystem is a Sega Master System / Game Gear / SG-1000 emulator written in C++"
 PKG_TOOLCHAIN="make"
-GET_HANDLER_SUPPORT="git"
 
 make_target() {
   make -C platforms/libretro/

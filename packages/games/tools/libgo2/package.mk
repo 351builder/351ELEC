@@ -6,17 +6,16 @@ PKG_VERSION="bc992566bb86f2fe0c8d981d4db46e2e2beb5b0e"
 PKG_SHA256="89ad1cf229d581fa8e4498f4f4c526215176e79885e935bd7dc48c5872655f92"
 PKG_ARCH="arm aarch64"
 PKG_LICENSE="LGPL"
-PKG_DEPENDS_TARGET="toolchain libevdev librga"
+PKG_DEPENDS_TARGET="toolchain libevdev librga openal-soft"
 PKG_SITE="https://github.com/OtherCrashOverride/libgo2"
 PKG_URL="$PKG_SITE/archive/$PKG_VERSION.tar.gz"
 PKG_LONGDESC="Support library for the ODROID-GO Advance "
 PKG_TOOLCHAIN="make"
 
-if [ "${DEVICE}" = "RG351V" ]
-then
-  PKG_PATCH_DIRS="RG351V"
-else
-  PKG_PATCH_DIRS="RG351P"
+if [ "${DEVICE}" = "RG351V" ] || [ "${DEVICE}" = "RG351MP" ]; then
+  PKG_PATCH_DIRS="rotation"
+elif [ "${DEVICE}" = "RG552" ]; then
+  PKG_PATCH_DIRS="audio"
 fi
 
 PKG_MAKE_OPTS_TARGET=" config=release ARCH= INCLUDES=-I$SYSROOT_PREFIX/usr/include/libdrm -I$SYSROOT_PREFIX/usr/include "

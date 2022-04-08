@@ -19,14 +19,14 @@
 ################################################################################
 
 PKG_NAME="uae4arm"
-PKG_VERSION="a1838fc526524c0a2c407a5773acbd54dd1a6a3b"
-PKG_SHA256="7713dab5f833219fa0b37ee925841eb06aa30b66b093a9e1dd61c5c87390a2e8"
+PKG_VERSION="96fd90b21388ae17c4dd83e4208930fdbddf5930"
+PKG_SHA256="7d2b765e2cb72bc153476782d85821b533081e7a8a9c5f472e959bd2d9b16e23"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
-PKG_SITE="https://github.com/libretro/uae4arm-libretro"
+PKG_SITE="https://github.com/Chips-fr/uae4arm-rpi"
 PKG_URL="$PKG_SITE/archive/$PKG_VERSION.tar.gz"
-PKG_DEPENDS_TARGET="toolchain"
+PKG_DEPENDS_TARGET="toolchain flac mpg123"
 PKG_PRIORITY="optional"
 PKG_SECTION="libretro"
 PKG_SHORTDESC="Port of uae4arm for libretro (rpi/android)"
@@ -35,24 +35,12 @@ PKG_LONGDESC="Port of uae4arm for libretro (rpi/android) "
 PKG_IS_ADDON="no"
 PKG_TOOLCHAIN="make"
 PKG_AUTORECONF="no"
-PKG_BUILD_FLAGS="-lto"
-VERSION=${LIBREELEC_VERSION}
 
 make_target() {
-  if [ "${ARCH}" != "aarch64" ]; then
-    CFLAGS="$CFLAGS -DARM -marm"
-    if [[ "$TARGET_FPU" =~ "neon" ]]; then
-      CFLAGS="-D__NEON_OPT"
-    fi
-    make HAVE_NEON=1 USE_PICASSO96=1
-  fi
+  make -f Makefile.libretro platform=unix_aarch64 "CPU_FLAGS=-mcpu=cortex-a35+crypto+crc"
 }
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/libretro
-  if [ "${ARCH}" != "aarch64" ]; then
-    cp uae4arm_libretro.so $INSTALL/usr/lib/libretro/
-  else
-    cp -vP $PKG_BUILD/../../build.${DISTRO}-${DEVICE}.arm/uae4arm-*/.install_pkg/usr/lib/libretro/uae4arm_libretro.so $INSTALL/usr/lib/libretro/
-  fi
+  cp uae4arm_libretro.so $INSTALL/usr/lib/libretro/
 }

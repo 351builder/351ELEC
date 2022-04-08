@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="vbam"
-PKG_VERSION="109573dea644e957832cbe56255bba50da584de4"
-PKG_SHA256="e6d6453a1f28ba49b92c7bbd3a83d5f1aaa7028d46ebb5440c362811014d1eb4"
+PKG_VERSION="254f6effebe882b7d3d29d9e417c6aeeabc08026"
+PKG_SHA256="0c96037a925d715c47a1d96c36107f25fbd31c990dd28754d71a64873f518c6d"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

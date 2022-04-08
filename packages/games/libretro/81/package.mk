@@ -19,8 +19,8 @@
 ################################################################################
 
 PKG_NAME="81"
-PKG_VERSION="028da99de5a69c1d067eb3f270c0507377c83bb7"
-PKG_SHA256="76a5c2520b7d1e73e7950398cc5ed68c33aa6aa99b29d6bb039b78237a745240"
+PKG_VERSION="6aba19246c1ec08f3de5659b2dbc3277ec6bfb97"
+PKG_SHA256="0e2d58021b7be33c588698f541bc2d3e630e9d0c773422d79eabc272a1a8cc3b"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"

@@ -19,8 +19,8 @@
 ################################################################################
 
 PKG_NAME="mgba"
-PKG_VERSION="4f3fcfac78f0ecd5e6309cc2a3f439650de2d529"
-PKG_SHA256="4133868db08b548c4615865e1a3fb46db89c654cfe739335a225fec7970ba231"
+PKG_VERSION="5d48e0744059ebf38a4e937b256ffd5df4e0d103"
+PKG_SHA256="789abe04da8f33c8ada97ed95a00e7fa46ec72f666d188224f15496db7c1a0c4"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="MPLv2.0"
@@ -37,12 +37,16 @@ PKG_TOOLCHAIN="make"
 PKG_AUTORECONF="no"
 PKG_USE_CMAKE="no"
 
+if [[ "$DEVICE" == RG351P ]] || [[ "$DEVICE" == RG351V ]]; then
+  PKG_PATCH_DIRS="rumble"
+fi
+
 make_target() {
   cd $PKG_BUILD
   if [[ "$ARCH" =~ "arm" ]]; then
     make -f Makefile.libretro platform=unix-armv HAVE_NEON=1
   else
-    make -f Makefile.libretro platform=armv8_a35
+    make -f Makefile.libretro platform=goadvance
   fi
 }
 

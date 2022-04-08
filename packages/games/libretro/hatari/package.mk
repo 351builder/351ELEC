@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,14 +20,14 @@
 ################################################################################
 
 PKG_NAME="hatari"
-PKG_VERSION="cea06eebf695b078fadc0e78bb0f2b2baaca799f"
-PKG_SHA256="41a044a0a5625052a4a477dca47897aafccd23d835dc20b43e41b37a38e64628"
+PKG_VERSION="e5e36a5262cfeadc3d1c7b411b7a70719c4f293c"
+PKG_SHA256="e1cc4f96d5ddedc70dcf59a73f05a6c6da476bbe7b2a9672fa3f8d09f4743925"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/libretro/hatari"
 PKG_URL="$PKG_SITE/archive/$PKG_VERSION.tar.gz"
-PKG_DEPENDS_TARGET="toolchain"
+PKG_DEPENDS_TARGET="toolchain capsimg"
 PKG_PRIORITY="optional"
 PKG_SECTION="libretro"
 PKG_SHORTDESC="New rebasing of Hatari based on Mercurial upstream. Tries to be a shallow fork for easy upstreaming later on."
@@ -46,6 +46,8 @@ make_target() {
   if [ "$ARCH" == "arm" ]; then
     CFLAGS="$CFLAGS -DNO_ASM -DARM -D__arm__ -DARM_ASM -DNOSSE -DARM_HARDFP"
   fi
+  CFLAGS="$CFLAGS -I$(get_build_dir capsimg)/Core -I$(get_build_dir capsimg)/.install_pkg/usr/local/include -L$(get_build_dir capsimg)/.install_pkg/usr/lib -lcapsimage -DHAVE_CAPSIMAGE=1 -DCAPSIMAGE_VERSION=5"
+  LDFLAGS="$LDFLAGS -I$(get_build_dir capsimg)/LibIPF -DHAVE_CAPSIMAGE=1"
   make -C .. -f Makefile.libretro
 }
 

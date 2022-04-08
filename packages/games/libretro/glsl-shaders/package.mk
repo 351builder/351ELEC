@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="glsl-shaders"
-PKG_VERSION="d7928c31c778e70ea5a0ac27b2eba089d4138895"
-PKG_SHA256="caa7144dc10414f8ed062ce2befc184677776f0a28ca0d1447d7a1aa2824d9a3"
+PKG_VERSION="accd16aa5d11a33bd173376003c4f34675a02db5"
+PKG_SHA256="adb5c7c86884f462fdc509bd27b43f5d8dd68e962cf049d2bec5b33f8e750a84"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"
@@ -44,4 +44,10 @@ configure_target() {
 makeinstall_target() {
   make install INSTALLDIR="$INSTALL/usr/share/common-shaders"
   cp -r $PKG_DIR/shaders/* $INSTALL/usr/share/common-shaders
+}
+
+post_makeinstall_target() {
+  cp $PKG_DIR/removeshaders.sh .
+  chmod 755 removeshaders.sh
+  /bin/sh removeshaders.sh $INSTALL
 }

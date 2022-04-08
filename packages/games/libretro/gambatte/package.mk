@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="gambatte"
-PKG_VERSION="4a9736b1f62cebb1eb4444926175f65ec49fbc1e"
-PKG_SHA256="3bc4bfb2abe5323ff14ecfd1382aa3eca113632792d4f11143df9bf8abf2ef5c"
+PKG_VERSION="15536214cdce31894d374b2ffa2494543057082b"
+PKG_SHA256="ca24eababf0b4cbdc1a10d9d3ecf2c3348b9b257fc87d8dfebd1e8d4000ee32e"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"
@@ -36,6 +36,10 @@ PKG_LONGDESC="Gambatte is an open-source Game Boy Color emulator written for fun
 PKG_IS_ADDON="no"
 PKG_TOOLCHAIN="make"
 PKG_AUTORECONF="no"
+
+if [[ "$DEVICE" == RG351P ]] || [[ "$DEVICE" == RG351V ]]; then
+  PKG_PATCH_DIRS="rumble"
+fi
 
 make_target() {
   make -f Makefile.libretro

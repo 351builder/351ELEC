@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="tgbdual"
-PKG_VERSION="fb6d2f6fca1956b389b3e9a8282df5b0cd465a6f"
-PKG_SHA256="3386cd993378b964580de547832ba9b00ee9c06498f12fe8520dc12a2e42e131"
+PKG_VERSION="1e0c4f931d8c5e859e6d3255d67247d7a2987434"
+PKG_SHA256="86fdbeec998e751e051fe80ecfd92ed5020b2436e01a4e40815718479174923a"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

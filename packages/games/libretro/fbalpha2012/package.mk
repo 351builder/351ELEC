@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="fbalpha2012"
-PKG_VERSION="e0542855dd4301e2af18213c42cc150e9d925819"
-PKG_SHA256="af8da5cdb40583d30a32540e05964ed0381082ccb4c32bb878a56a1f76362327"
+PKG_VERSION="7f8860543a81ba79c0e1ce1aa219af44568c628a"
+PKG_SHA256="8de890151718424518b30bdef563a5922d1aa2442fd23a8453503cb7c42e65a7"
 PKG_ARCH="any"
 PKG_LICENSE="Non-commercial"
 PKG_SITE="https://github.com/libretro/fbalpha2012"
@@ -34,11 +34,7 @@ PKG_TOOLCHAIN="make"
 
 make_target() {
   cd svn-current/trunk
-  if [ "$ARCH" == "arm" ]; then
-    make -f makefile.libretro platform=armv CC=$CC CXX=$CXX
-  else
-    make -f makefile.libretro CC=$CC CXX=$CXX
-  fi
+  make -f makefile.libretro
 }
 
 makeinstall_target() {

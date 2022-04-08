@@ -19,8 +19,8 @@
 ################################################################################
 
 PKG_NAME="px68k"
-PKG_VERSION="66274aa3dc0f86f49f9aba1907b4d88b5de8acf2"
-PKG_SHA256="712fdbccfef42196d22ccf436b06c9c40bb20ef2e105babfcb52d6340806fa20"
+PKG_VERSION="0183381d655be213d9c27207e1a29ad372a7a16d"
+PKG_SHA256="9f26706569d8c9711565cf23a6f5f5683e262f48d8a8e8820514bda0e9680cd9"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="Unknown"
@@ -35,6 +35,10 @@ PKG_LONGDESC="Portable SHARP X68000 Emulator for PSP, Android and other platform
 PKG_IS_ADDON="no"
 PKG_TOOLCHAIN="make"
 PKG_AUTORECONF="no"
+
+if [[ "$DEVICE" == RG351P ]] || [[ "$DEVICE" == RG351V ]]; then
+  PKG_PATCH_DIRS="rumble"
+fi
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/libretro

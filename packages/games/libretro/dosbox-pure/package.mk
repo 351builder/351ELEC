@@ -19,18 +19,17 @@
 ################################################################################
 
 PKG_NAME="dosbox-pure"
-PKG_VERSION="300a223f89c7eabe2ac58b50ca65afb08abb6716"
+PKG_VERSION="087ea87880d66c6b277cf3ba62a16a4969fa4adb"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://github.com/schellingb/dosbox-pure"
 PKG_URL="$PKG_SITE.git"
-PKG_DEPENDS_TARGET="toolchain SDL SDL_net"
+PKG_DEPENDS_TARGET="toolchain"
 PKG_PRIORITY="optional"
 PKG_SECTION="libretro"
 PKG_SHORTDESC="A port of DOSBox to libretro"
 PKG_LONGDESC="A port of DOSBox to libretro"
-GET_HANDLER_SUPPORT="git"
 PKG_IS_ADDON="no"
 PKG_AUTORECONF="no"
 PKG_TOOLCHAIN="make"
@@ -41,5 +40,5 @@ make_target() {
 
 makeinstall_target() {
   mkdir -p $INSTALL/usr/lib/libretro
-  cp $PKG_BUILD/dosbox_pure_libretro.so $INSTALL/usr/lib/libretro
+  cp dosbox_pure_libretro.so $INSTALL/usr/lib/libretro/
 }

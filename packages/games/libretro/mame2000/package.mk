@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="mame2000"
-PKG_VERSION="49671d509bd370a1e92b972eb021149fcdfb1a0d"
-PKG_SHA256="f31bbdf0addb54c655d8556f305f44a87f234f5a6af1e6988dce951e19e8d022"
+PKG_VERSION="51079410d52da026e67448c482afeac7bcc876e7"
+PKG_SHA256="15b135f3375ab8ebc6b06e9bb4fb061c9cc0bc20d5070fe4cc73aad970764249"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="MAME"

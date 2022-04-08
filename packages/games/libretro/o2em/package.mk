@@ -19,8 +19,8 @@
 ################################################################################
 
 PKG_NAME="o2em"
-PKG_VERSION="726f5ad6752eb9a98dd80b58fd55a0073f1ebb30"
-PKG_SHA256="a8a49452c8c6308d98d96890631bacb82185454fc2376a141966d00e46b858a3"
+PKG_VERSION="efd749cec2dd1ce42a8aa3048a89f817d271d804"
+PKG_SHA256="06884fc03c9793a16148884c28ca674828eb43c95acb892332ec39e4b629caa8"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="Artistic License"

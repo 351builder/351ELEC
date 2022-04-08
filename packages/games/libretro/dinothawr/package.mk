@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="dinothawr"
-PKG_VERSION="90264f4de875407212ada474761097de7a45fa53"
-PKG_SHA256="d422a680d7834c540c10ae0d2d5786e96d09c6296295e3f09fbd4f7ab38d42bb"
+PKG_VERSION="d9ed9c8da3d7c2829a4329aadb1fb65f526c326f"
+PKG_SHA256="4ca6b7ab50b131f592d5961bdd29da2aedeae77276d359776a8cf7d4b90a5eb2"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="Non-commercial"

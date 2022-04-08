@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="libretro-database"
-PKG_VERSION="92d00897d24e001a68a4e0d7110ed37ce44794b2"
-PKG_SHA256="6fbe876833e3926a4e31ddad39b0ccfce1f2ec78f1798a29221fe4207b63c7f1"
+PKG_VERSION="395ef4922a2017fb324221f93753682163ba1e6a"
+PKG_SHA256="49b184a63c3e78bdb46d39048fc988c9c45d4e0318542b3d1198fcfe6b80b1ea"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL"

@@ -2,14 +2,13 @@
 # Copyright (C) 2021-present Shanti Gilbert (https://github.com/shantigilbert)
 
 PKG_NAME="ecwolf"
-PKG_VERSION="3ce6e4d064b54eec72386fe949ec7be20746c16c"
+PKG_VERSION="cdf5a4ccc09610914134844bb81f7df3105d4336"
 PKG_LICENSE="GPLv2"
 PKG_SITE="https://bitbucket.org/ecwolf/ecwolf"
 PKG_URL="$PKG_SITE.git"
 PKG_DEPENDS_TARGET="toolchain SDL2 SDL2_mixer SDL2_net ecwolf:host"
 PKG_LONGDESC="ECWolf is a port of the Wolfenstein 3D engine based of Wolf4SDL. It combines the original Wolfenstein 3D engine with the user experience of ZDoom to create the most user and mod author friendly Wolf3D source port."
 PKG_TOOLCHAIN="cmake-make"
-GET_HANDLER_SUPPORT="git"
 
 pre_patch() {
   find $(echo "${PKG_BUILD}" | cut -f1 -d\ ) -type f -exec dos2unix -q {} \;

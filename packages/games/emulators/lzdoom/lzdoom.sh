@@ -1,8 +1,7 @@
 #!/usr/bin/bash
 
 # SPDX-License-Identifier: GPL-2.0-or-later
-# Copyright (C) 2021-present Shanti Gilbert (https://github.com/shantigilbert)
-# Copyright (C) 2021-present 351ELEC (https://github.com/351ELEC/351ELEC)
+# Copyright (C) 2021-present AmberELEC (https://github.com/AmberELEC)
 
 . /etc/profile
 
@@ -11,16 +10,19 @@ RUN_DIR="/storage/roms/doom"
 CONFIG="/storage/.config/distribution/lzdoom/lzdoom.ini"
 SAVE_DIR="/storage/roms/gamedata/lzdoom"
 
+if [ ! -L "/storage/.config/lzdoom" ]
+then
+  ln -sf "/storage/.config/distribution/lzdoom" "/storage/.config/lzdoom"
+fi
+
+if [ ! -f "/storage/.config/distribution/lzdoom/lzdoom.ini" ]
+then
+  cp -rf /usr/config/distribution/lzdoom/lzdoom.ini /storage/.config/distribution/lzdoom/
+fi
+
 mkdir -p ${SAVE_DIR}
 
 params=" -config ${CONFIG} -savedir ${SAVE_DIR}"
-
-if [[ "$EE_DEVICE" == RG351P ]]; then
-  params+=" -width 480 -height 320"
-fi
-if [[ "$EE_DEVICE" == RG351V ]]; then
-  params+=" -width 640 -height 480"
-fi
 
 # EXT can be wad, WAD, iwad, IWAD, pwad, PWAD or doom
 EXT=${1#*.}
@@ -38,6 +40,13 @@ if [ ${EXT} == "doom" ]; then
     done < "${1}"
 else
   params+=" -iwad ${1}"
+fi
+
+if [[ "$EE_DEVICE" == RG351P ]]; then
+  params+=" -width 360 -height 240 +vid_fps 1 +cl_capfps 0 +vid_renderer 0 +vid_glswfb 0"
+fi
+if [[ "$EE_DEVICE" == RG351V ]] || [[ "$EE_DEVICE" == RG351MP ]]; then
+  params+=" -width 320 -height 240 +vid_fps 1 +cl_capfps 0 +vid_renderer 0 +vid_glswfb 0"
 fi
 
 cd "${RUN_DIR}"

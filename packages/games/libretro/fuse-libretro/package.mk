@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="fuse-libretro"
-PKG_VERSION="e52a9eb4d094a1afc2af00fa7af51d891a4232a8"
-PKG_SHA256="8ef9282b9c53ae02108c5fd1f955200fb184c99d4608bfc9c6cc5823ffd4ddbe"
+PKG_VERSION="042f8a9d4758d2d9a47ae064a1fe76b73ad9282c"
+PKG_SHA256="16f709c064a7d25b7f82d3f18b95e6372a2ea82dc50a177568a5832303c1938a"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"

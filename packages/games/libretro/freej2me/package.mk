@@ -1,9 +1,9 @@
 # SPDX-License-Identifier: GPL-2.0-or-later
-# Copyright (C) 2021-present 351ELEC (https://github.com/351ELEC)
+# Copyright (C) 2021-present AmberELEC (https://github.com/AmberELEC)
 
 PKG_NAME="freej2me"
-PKG_VERSION="518cca4ae11260b7aeb4aafc128e560ac7f3e5b3"
-PKG_SHA256="2677a6ba3b9c463f8dd75a392a7a3ef7b4310064db570fafc12aade7bdbd3c29"
+PKG_VERSION="9b38929ac883a1377c05bc1db659b400739c91ce"
+PKG_SHA256="95ffced1d4728608e7ced3067c948a7135b267aef0a8211bb73f44feca78c367"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_SITE="https://github.com/hex007/freej2me"

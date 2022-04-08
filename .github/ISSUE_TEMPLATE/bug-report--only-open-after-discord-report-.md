@@ -9,7 +9,7 @@ assignees: ''
 
 ## This is only for actual bugs that can be reproduced on multiple systems!  ##
  For Support visit us in our Discord
-https://discord.gg/bmXtCt88Tz
+https://discord.com/invite/R9Er7hkRMe
 
 ### Getting started
 Before opening an issue, check the release notes of the version that you are using and recent commits.  Be sure to fill out the template completely, accurately, and with as much detail as possible.  Issues without sufficient detail will be rejected and closed.
@@ -31,7 +31,7 @@ A clear and concise description of what you expected to happen.
 If applicable, add screenshots to help explain your problem.
 
 ### Device (please complete the following information):
- - Version of 351ELEC that you are using
+ - Version of AmberELEC that you are using
 
 ### Additional context
 Add any other context about the problem here.

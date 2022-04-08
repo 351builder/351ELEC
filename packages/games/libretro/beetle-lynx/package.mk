@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="beetle-lynx"
-PKG_VERSION="bffe3550f0aee1b67575b4eaa51ef3edbd89606c"
-PKG_SHA256="bc99f94016d295e404897fc4fa92abe121feef7d1e039140c39336b5a0dad6a4"
+PKG_VERSION="de0d520d679cb92767876d4e98da908b1ea6a2d6"
+PKG_SHA256="84136272b5ff87e140b3174b3dcc070d6cee06bf7d2673f1c0f442f507059cdb"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

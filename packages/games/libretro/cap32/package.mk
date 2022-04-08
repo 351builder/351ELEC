@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="cap32"
-PKG_VERSION="408da091504dabe9678b25b7a6c3bbef0bc4c140"
-PKG_SHA256="aa9474099c350d2fbac149f3feab28512e66d68f2a566d9f2de32ae5d37e26fc"
+PKG_VERSION="a1b2329416b1e3f32e0859dd8d3c71cb8c3e1c08"
+PKG_SHA256="5debdaab644c1b889cff9ddb4b98836c68805cd12edd26dfcc71095e699a0a9d"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

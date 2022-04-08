@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="beetle-vb"
-PKG_VERSION="06f9017dbaf0083ad87696728c4f404e689584c0"
-PKG_SHA256="45515f45389e539ee4e2a27a1da496b6c00a49ee6093b90d16d4bc885ff04d67"
+PKG_VERSION="a91437af0879124aa00b6cb30ca1189f2c84b7cb"
+PKG_SHA256="26baa895e174667e7ae295c21fa267faecaca1c345a11aaf64d4cb81778ce6f7"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv2"

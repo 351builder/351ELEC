@@ -2,8 +2,8 @@
 # Copyright (C) 2020-present Shanti Gilbert (https://github.com/shantigilbert)
 
 PKG_NAME="hydracastlelabyrinth"
-PKG_VERSION="8397f0a01f4c602c7250574d53742676f105353f"
-PKG_SHA256="e065ee1a943c5dd9522fa95d7ea9fa6f502bf1eb29b01d7c03058fa924efe95e"
+PKG_VERSION="c5e6afca55a30e951df69df29395820994547f19"
+PKG_SHA256="e2fa209697ae399e29950ba10dfd9d8b4a6cf766de332d66a1e554817d7ce8be"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPL2"
@@ -14,7 +14,7 @@ PKG_LONGDESC="A port to Linux (and OpenPandora / DragonBox Pyra / ODroid / Pocke
 PKG_TOOLCHAIN="cmake-make"
 
 pre_configure_target() {
-   export CFLAGS="$CFLAGS -fcommon"
+  export CFLAGS="$CFLAGS -fcommon"
   PKG_CMAKE_OPTS_TARGET=" -DUSE_SDL2=ON -DSDL2_INCLUDE_DIRS=$SYSROOT_PREFIX/usr/include/SDL2 -DSDL2_LIBRARIES=$SYSROOT_PREFIX/usr/lib"
   LDFLAGS="$LDFLAGS -lSDL2"
 }
@@ -22,6 +22,6 @@ pre_configure_target() {
 makeinstall_target() {
   mkdir -p $INSTALL/usr/local/bin
   cp $PKG_BUILD/.${TARGET_NAME}/hcl $INSTALL/usr/local/bin
-  mkdir -p $INSTALL/usr/config/distribution/ports/hcl
-  cp -rf $PKG_BUILD/data $INSTALL/usr/config/distribution/ports/hcl/
+  mkdir -p $INSTALL/usr/config/ports/hcl
+  cp -rf $PKG_BUILD/data $INSTALL/usr/config/ports/hcl/
 }

@@ -1,7 +1,7 @@
 ################################################################################
 #      This file is part of OpenELEC - http://www.openelec.tv
 #      Copyright (C) 2009-2012 Stephan Raue (stephan@openelec.tv)
-#      Copyright (C) 2020      351ELEC team (https://github.com/fewtarius/351ELEC)
+#      Copyright (C) 2020-present AmberELEC (https://github.com/AmberELEC)
 #
 #  This Program is free software; you can redistribute it and/or modify
 #  it under the terms of the GNU General Public License as published by
@@ -20,8 +20,8 @@
 ################################################################################
 
 PKG_NAME="gw-libretro"
-PKG_VERSION="6b99e7711d75a8194bede3229e8cca5bc99f0687"
-PKG_SHA256="74d2bedc19b2922919bb98d8f8e74793ab0a4ae05470c86bf7ad0433f2385e70"
+PKG_VERSION="fc3d8d355b45466c52f8c56a8bcd395b702b310b"
+PKG_SHA256="77095ab1cafb2151ef8ad85b947c516478677dd236cd2754a5266296aa103629"
 PKG_REV="1"
 PKG_ARCH="any"
 PKG_LICENSE="GPLv3"
